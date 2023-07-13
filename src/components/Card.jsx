@@ -1,49 +1,97 @@
-
-import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { useState } from 'react';
-import {data} from  "../helper/data";
+import React, { useState } from 'react'
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
+import {data} from "../helper/data";
 import PlayerCard from './PlayerCard';
-
-
-
-
+import { Col } from 'react-bootstrap';
 
 const Card = () => {
-const [ara , setAra]= useState("")
-console.log(data);
-const handleChange=(e)=>{
-  console.log(e.target.value);
+    const [ara,setAra] = useState("")
+    console.log(data)
+    const handleChange = (e) =>{
+        console.log(e.target.value)
+        setAra(e.target.value) //! setter mtodları asenkron olarak çalışır.
+        // console.log(search)
+        
+    }
+    console.log(ara);
 
-  setAra(e.target.value)
-  console.log(ara);
+    const filteredData = data.filter(item=> item.name.toLowerCase().includes(ara.trim().toLowerCase()))
 
-  const filteredData=data.filter(item=>item.name.toLowerCase().includes(ara.trim().toLowerCase()))
-
-  console.log("filter",filteredData);
-
-}
+    console.log("filter",filteredData)
 
   return (
-    <div >
-
-<Form.Control type="search" placeholder="Oyuncu Ara ..." onChange={handleChange}  />
-<Container className='p-3 rounded-4 card-container my-3'>
-      <Row xs={2} md={4} lg={6} className='justify-content-center g-3 my-3 '>
-        <Col>1 of 2</Col>
-       {filteredData.map((item , i)=>(
-          <PlayerCard key={i}  {...item}/>
-        ))
-       }
-      </Row>
-   
-    </Container>
-
-    </div >
-  )
+    <>
+      <Form.Control
+        type="ara"
+        placeholder="Oyuncu Ara..."
+        onChange={handleChange}
+      />
+      <Container className="p-3 rounded-4 card-container my-3">
+        <Row xs={1} sm={2} md={3} lg={4} className="justify-content-center g-3">
+          
+          {filteredData.map((item, i) => (
+            <PlayerCard key={i} {...item} />
+          ))}
+        </Row>
+      </Container>
+    </>
+  );
 }
 
-export default Card
+export default Card;
+
+
+
+
+// import Form from 'react-bootstrap/Form';
+// import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import { useState } from 'react';
+// import {data} from  "../helper/data";
+// import PlayerCard from './PlayerCard';
+
+
+
+
+
+// const Card = () => {
+// const [ara , setAra]= useState("")
+// console.log(data);
+// const handleChange=(e)=>{
+//   console.log(e.target.value);
+
+//   setAra(e.target.value)
+//   // console.log(ara);
+
+//   const filteredData=data.filter(item=>item.name.toLowerCase().includes(ara.trim().toLowerCase()))
+
+//   console.log("filter",filteredData);
+
+// }
+
+//   return (
+//     < >
+
+// <Form.Control type="search" placeholder="Oyuncu Ara ..." onChange={handleChange}  />
+// <Container className='p-3 rounded-4 card-container my-3'>
+//       <Row xs={2} md={4} lg={6} className='justify-content-center g-3 my-3 '>
+//         <Col>1 of 2</Col>
+
+//         {filteredData.map((player, i) => (
+//             <PlayerCard key={i} {...player} />
+//           ))}
+
+//       </Row>
+   
+//     </Container>
+
+//     </>
+//   )
+// }
+
+// export default Card
 

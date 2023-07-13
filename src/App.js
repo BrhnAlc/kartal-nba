@@ -5,6 +5,7 @@ import Card from "./components/Card"
 
 
 
+
 const App = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const App = () => {
 <Header/>
 <Card/>
 </Container>
+
     </div>
   )
 }
