@@ -8,7 +8,7 @@ const Header =()=>{
   return(
   
 <Container>
-<Image src={logo} width="200px"  />
+<Image src={logo} width="200px" className='rounded-4'  />
 <h1 className='my-2'>BİRGÜN DEĞİL HERGÜN BEŞİKTAŞ.</h1>
     </Container>
     
