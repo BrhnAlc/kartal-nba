@@ -33,13 +33,10 @@ const handleChange=(e)=>{
 <Container className='p-3 rounded-4 card-container my-3'>
       <Row xs={2} md={4} lg={6} className='justify-content-center g-3 my-3 '>
         <Col>1 of 2</Col>
-        {
-          filteredData.map((item ,i)=>{
-            <PlayerCard key={i}
-            {...item}
-            />
-          })
-        }
+       {filteredData.map((item , i)=>(
+          <PlayerCard key={i}  {...item}/>
+        ))
+       }
       </Row>
    
     </Container>
