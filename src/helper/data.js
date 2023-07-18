@@ -11,7 +11,7 @@ export const data = [
     },
     {
       name: "Burak Can Yıldızlı",
-      img: "https://images.bjk.com.tr/images/news/burak-can-yildizli-milli-takima-davet-edildi_705x400.jpg",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGYi0kCBmgeZaAPivXzHLdXVTKulBZXj77nQ&usqp=CAU",
       statistics: [
         "21,791 points",
         "8,974 rebaunds",
@@ -41,7 +41,7 @@ export const data = [
     },
     {
       name: "Isaiah Whiteheada",
-      img: "https://images.bjk.com.tr/images/news/isaiah-whitehead-baba-oldu_705x400.jpg",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaPZE0DXEHF45wlHbb1DusFn9JBMJORsvQMQ&usqp=CAU",
       statistics: [
         "32,292 points",
         "6,672 rebaunds",
